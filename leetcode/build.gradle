@@ -1,0 +1,5 @@
+dependencies {
+    // 依赖common项目
+    compile project(":public_data_struct")
+    // 配置该项目特有的依赖
+}
