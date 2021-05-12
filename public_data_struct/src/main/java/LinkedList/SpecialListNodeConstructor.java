@@ -39,4 +39,12 @@ public class SpecialListNodeConstructor {
 
     return new ListNode[] {headA, headB};
   }
+
+  public static ListNode GeneCircleList(int[] arr, int startPosCir) {
+    LinkedNodeList l = new LinkedNodeList(arr);
+    ListNode lastNode = l.GetLast();
+    ListNode ls = l.GetListNodeWithIndex(startPosCir);
+    lastNode.next = ls;
+    return l.GetHead();
+  }
 }

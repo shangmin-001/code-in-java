@@ -37,6 +37,14 @@ public class LinkedNodeList {
     return this.head;
   }
 
+  public ListNode GetLast() {
+    ListNode cur = this.head;
+    while (cur.next != null) {
+      cur = cur.next;
+    }
+    return cur;
+  }
+
   public void PrintValueList() {
     ListNode cur = this.head;
     while (cur != null) {
