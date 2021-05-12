@@ -46,6 +46,27 @@ public class LinkedNodeList {
     System.out.println();
   }
 
+  public void AppendListNode(ListNode newNode) {
+    ListNode pre = this.head;
+    if (pre == null) {
+      this.head = newNode;
+    }
+    while (pre.next != null) {
+      pre = pre.next;
+    }
+    pre.next = newNode;
+    return;
+  }
+
+  public ListNode GetListNodeWithIndex(int index) {
+    ListNode cur = this.head;
+    while (index > 0) {
+      cur = cur.next;
+      index--;
+    }
+    return cur;
+  }
+
   public boolean ValueListEquals(LinkedNodeList lnl) {
     if (lnl == null) {
       return false;
